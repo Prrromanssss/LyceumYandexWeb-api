@@ -26,8 +26,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_cleanup.apps.CleanupConfig',
+    'homepage.apps.HomepageConfig',
     'users.apps.UsersConfig',
+    'django_cleanup.apps.CleanupConfig',
     'sorl.thumbnail',
     'ckeditor',
     'widget_tweaks',
@@ -96,7 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
