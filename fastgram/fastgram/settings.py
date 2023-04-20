@@ -18,6 +18,12 @@ INTERNAL_IPS = [
     '127.0.0.1',
 ]
 
+LOGIN_URL = 'users/login/'
+LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_URL = 'users/logout'
+LOGOUT_REDIRECT_URL = '/'
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -27,6 +33,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage.apps.HomepageConfig',
+    'feedback.apps.FeedbackConfig',
+    'response.apps.ResponseConfig',
+    'delivery.apps.DeliveryConfig',
     'users.apps.UsersConfig',
     'django_cleanup.apps.CleanupConfig',
     'sorl.thumbnail',
@@ -109,7 +118,6 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
