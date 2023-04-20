@@ -26,6 +26,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_cleanup.apps.CleanupConfig',
+    'users.apps.UsersConfig',
+    'sorl.thumbnail',
+    'ckeditor',
+    'widget_tweaks',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -104,4 +110,23 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
+
+STATIC_URL = '/static_dev/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static_dev'
+]
+STATIC_ROOT = BASE_DIR / 'static'
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR / 'send_mail'
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+ADMIN_EMAIL = os.environ.get('ADMIN_EMAIL', 'admin@yandex.ru')
+
+YANDEX_MAPS_API_KEY = os.environ.get('YANDEX_MAPS_API_KEY', 'ym_apikey')
