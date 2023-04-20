@@ -20,10 +20,10 @@
               class="nav-link px-2
               {% if view_name == 'homepage:home' %} text-secondary disabled
               {% else %} li_active text-white {% endif %}">О нас</a></li>
-            {% comment %} <li><a href="{% url 'delivery:delivery' %}"
+            <li><a href="{% url 'delivery:delivery' %}"
               class="nav-link px-2
               {% if view_name == 'delivery:delivery' %} text-secondary disabled
-              {% else %} li_active text-white {% endif %}">Доставки</a></li> {% endcomment %}
+              {% else %} li_active text-white {% endif %}">Доставки</a></li>
             <li><a href="{% url 'response:list_responses' %}"
               class="nav-link px-2
               {% if view_name == 'response:list_responses' %} text-secondary disabled
